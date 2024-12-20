@@ -359,15 +359,17 @@ PRODUCT_PACKAGES += \
 # Rootdir
 PRODUCT_PACKAGES += \
     fstab.mt6768 \
-    fstab.mt6768_ramdisk \
-    init.ago.rc \
+    fstab.mt6768.ramdisk \
     init.connectivity.rc \
     init.modem.rc \
     init.mt6768.rc \
     init.mt6768.usb.rc \
+    init.mt6768.power.rc \
+    init.nfc.rc \
+    init.project.rc \
     init.sensor_1_0.rc \
-    init.target.rc \
-    ueventd.mtk.rc
+    init.zram.rc \
+    ueventd.mt6768.rc
 
 PRODUCT_PACKAGES += \
     init.recovery.mt6768.rc
