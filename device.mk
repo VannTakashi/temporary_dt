@@ -91,7 +91,7 @@ PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.1-service.mt6768
 
 PRODUCT_PACKAGES += \
-    libvendor.goodix.hardware.biometrics.fingerprint@2.1.vendor
+    libvendor.goodix.hardware.biometrics.fingerprint@2.1
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/keylayout/uinput-fpc.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/uinput-fpc.kl \
@@ -99,22 +99,17 @@ PRODUCT_COPY_FILES += \
 
 # Bluetooth
 PRODUCT_PACKAGES += \
-    android.hardware.bluetooth@1.0.vendor \
-    android.hardware.bluetooth@1.1.vendor
+    android.hardware.bluetooth@1.0 \
+    android.hardware.bluetooth@1.1
 
 # Camera
 PRODUCT_PACKAGES += \
-    android.hardware.camera.common@1.0.vendor \
-    android.hardware.camera.device@3.3.vendor \
-    android.hardware.camera.device@3.4.vendor \
-    android.hardware.camera.device@3.5.vendor \
-    android.hardware.camera.device@3.6.vendor \
-    android.hardware.camera.provider@2.4.vendor \
-    android.hardware.camera.provider@2.5.vendor \
-    android.hardware.camera.provider@2.6.vendor \
+    android.hardware.camera.common@1.0 \
+    android.hardware.camera.device@3.6 \
+    android.hardware.camera.provider@2.6 
 
 PRODUCT_PACKAGES += \
-    libdng_sdk.vendor
+    libdng_sdk
 
 PRODUCT_PACKAGES += \
     libutils-v32
@@ -131,10 +126,7 @@ PRODUCT_PACKAGES += \
     libmockdrmcryptoplugin
 
 PRODUCT_PACKAGES += \
-    android.hardware.drm@1.0.vendor \
-    android.hardware.drm@1.1.vendor \
-    android.hardware.drm@1.2.vendor \
-    android.hardware.drm@1.3.vendor
+    android.hardware.drm@1.4
 
 # Disable SF configstore
 PRODUCT_PACKAGES += \
@@ -148,12 +140,12 @@ PRODUCT_PACKAGES += \
     android.hardware.memtrack-service.mediatek-mali
 
 PRODUCT_PACKAGES += \
-    android.hardware.graphics.common@1.2.vendor \
-    android.hardware.graphics.mapper@4.0.vendor \
-    android.hardware.graphics.allocator@4.0.vendor
+    android.hardware.graphics.common@1.2 \
+    android.hardware.graphics.mapper@4.0 \
+    android.hardware.graphics.allocator@4.0
 
 PRODUCT_PACKAGES += \
-    libdrm.vendor
+    libdrm
 
 # fastbootd
 PRODUCT_PACKAGES += \
@@ -171,13 +163,9 @@ PRODUCT_PACKAGES += \
 
 # GNSS
 PRODUCT_PACKAGES += \
-    android.hardware.gnss@1.0.vendor \
-    android.hardware.gnss@1.1.vendor \
-    android.hardware.gnss@2.0.vendor \
-    android.hardware.gnss@2.1.vendor \
-    android.hardware.gnss.measurement_corrections@1.0.vendor \
-    android.hardware.gnss.measurement_corrections@1.1.vendor \
-    android.hardware.gnss.visibility_control@1.0.vendor
+    android.hardware.gnss@2.1 \
+    android.hardware.gnss.measurement_corrections@1.1 \
+    android.hardware.gnss.visibility_control@1.0
 
 # Health
 PRODUCT_PACKAGES += \
@@ -192,12 +180,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hidl.base@1.0 \
     android.hidl.allocator@1.0 \
-    android.hidl.base@1.0.vendor \
-    android.hidl.allocator@1.0.vendor \
     libhidltransport \
-    libhidltransport.vendor \
-    libhwbinder \
-    libhwbinder.vendor
+    libhwbinder 
 
 # IMS
 PRODUCT_BOOT_JARS += \
@@ -219,13 +203,13 @@ PRODUCT_PACKAGES += \
 
 # Keymaster
 PRODUCT_PACKAGES += \
-    android.hardware.keymaster@4.0.vendor
+    android.hardware.keymaster@4.0
 
 PRODUCT_PACKAGES += \
-    libkeymaster4.vendor \
-    libkeymaster4support.vendor \
-    libpuresoftkeymasterdevice.vendor \
-    libsoft_attestation_cert.vendor
+    libkeymaster4 \
+    libkeymaster4support \
+    libpuresoftkeymasterdevice \
+    libsoft_attestation_cert
 
 # Lights
 PRODUCT_PACKAGES += \
@@ -263,34 +247,30 @@ DEVICE_PACKAGE_OVERLAYS += \
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
-    $(LOCAL_PATH)/overlay-lineage
+    $(LOCAL_PATH)/overlay
 
 PRODUCT_PACKAGES += \
-    CarrierConfigOverlayMT6768 \
-    FrameworksResOverlayMT6768 \
-    SettingsOverlayMT6768 \
-    TelephonyOverlayMT6768 \
-    TetheringConfigOverlayMT6768 \
-    WifiOverlayMT6768
+    SystemUIOverlayGale \
+    FrameworksResOverlayGale \
+    SettingsResOverlayGale \
+    TelephonyOverlayGale \
+    TetheringResOverlayGale \
+    WifiResOverlayGale
 
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power-service.mediatek-libperfmgr
 
 PRODUCT_PACKAGES += \
-    libmtkperf_client_vendor \
     libmtkperf_client
 
 PRODUCT_PACKAGES += \
-    vendor.mediatek.hardware.mtkpower@1.0.vendor \
-    vendor.mediatek.hardware.mtkpower@1.1.vendor \
+    vendor.mediatek.hardware.mtkpower@1.0 \
+    vendor.mediatek.hardware.mtkpower@1.1 \
     vendor.mediatek.hardware.mtkpower@1.2-service.stub
 
 PRODUCT_PACKAGES += \
-    android.hardware.power@1.0.vendor \
-    android.hardware.power@1.1.vendor \
-    android.hardware.power@1.2.vendor \
-    android.hardware.power@1.3.vendor
+    android.hardware.power@1.3
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
@@ -344,16 +324,16 @@ PRODUCT_COPY_FILES += \
 
 # Radio
 PRODUCT_PACKAGES += \
-    android.hardware.radio@1.0.vendor \
-    android.hardware.radio@1.1.vendor \
-    android.hardware.radio@1.2.vendor \
-    android.hardware.radio@1.3.vendor \
-    android.hardware.radio@1.4.vendor \
-    android.hardware.radio@1.5.vendor \
-    android.hardware.radio.config@1.0.vendor \
-    android.hardware.radio.config@1.1.vendor \
-    android.hardware.radio.config@1.2.vendor \
-    android.hardware.radio.deprecated@1.0.vendor \
+    android.hardware.radio@1.0 \
+    android.hardware.radio@1.1 \
+    android.hardware.radio@1.2 \
+    android.hardware.radio@1.3 \
+    android.hardware.radio@1.4 \
+    android.hardware.radio@1.5 \
+    android.hardware.radio.config@1.0 \
+    android.hardware.radio.config@1.1 \
+    android.hardware.radio.config@1.2 \
+    android.hardware.radio.deprecated@1.0 \
     android.hardware.radio-V1.4-java
 
 # Rootdir
@@ -376,8 +356,7 @@ PRODUCT_PACKAGES += \
 
 # Sensors
 PRODUCT_PACKAGES += \
-    android.hardware.sensors@1.0.vendor \
-    android.hardware.sensors@2.0.vendor \
+    android.hardware.sensors@2.0 \
     android.frameworks.sensorservice@1.0
 
 PRODUCT_PACKAGES += \
@@ -393,17 +372,21 @@ PRODUCT_PACKAGES += \
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
+    $(LOCAL_PATH) \
+    hardware/lineage/interfaces/power-libperfmgr \
     hardware/google/interfaces \
     hardware/google/pixel \
     hardware/mediatek \
-    $(LOCAL_PATH)
+    hardware/mediatek/libmtkperf_client \
+    hardware/xiaomi \
+    vendor/xiaomi/gale
 
 # Thermal
 PRODUCT_PACKAGES += \
     android.hardware.thermal@1.0-impl
 
 PRODUCT_PACKAGES += \
-    android.hardware.thermal@2.0.vendor
+    android.hardware.thermal@2.0
 
 # Vibrator
 PRODUCT_PACKAGES += \
@@ -411,13 +394,12 @@ PRODUCT_PACKAGES += \
 
 # Wi-Fi
 PRODUCT_PACKAGES += \
-    android.hardware.wifi.supplicant@1.0.vendor \
-    android.hardware.wifi.supplicant@1.1.vendor \
-    android.hardware.wifi.supplicant@1.2.vendor \
-    android.hardware.wifi.supplicant@1.3.vendor \
-    android.hardware.wifi.hostapd@1.0.vendor \
-    android.hardware.wifi.hostapd@1.1.vendor \
-    android.hardware.wifi.hostapd@1.2.vendor
+    android.hardware.wifi.supplicant@1.2 \
+    android.hardware.wifi.supplicant@1.3 \
+    android.hardware.wifi.supplicant@1.4 \
+    android.hardware.wifi.hostapd@1.1 \
+    android.hardware.wifi.hostapd@1.2 \
+    android.hardware.wifi.hostapd@1.3
 
 PRODUCT_PACKAGES += \
     android.hardware.wifi@1.0-service-lazy.mt6768

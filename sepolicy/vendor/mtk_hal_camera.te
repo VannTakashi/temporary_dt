@@ -1,3 +1,5 @@
+type system_camera_prop, property_type;
+
 allow mtk_hal_camera persist_data_file:dir { search };
 
 allow mtk_hal_camera persist_camera_data_file:dir rw_dir_perms;
